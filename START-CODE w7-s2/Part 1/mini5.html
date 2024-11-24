@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="checkbox"]
+        {
+            width: 20px;
+            height: 20px;
+            appearance: none; /* Removes default checkbox styling */
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: gray;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]:indeterminate
+        {
+            background-color: red;
+        }
+
+        input[type="checkbox"]:checked
+        {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="my-checkbox">
+
+    <script>
+        let myCheckbox = document.getElementById("my-checkbox");
+        myCheckbox.indeterminate = true;    
+    </script>
+</body>
+</html>

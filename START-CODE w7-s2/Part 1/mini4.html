@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display a different style when the checkbox is checked</title>
+    <style>
+        .checkbox {
+            position: relative;
+        }
+        .checkbox label {
+            position: absolute;
+            top: 0 ;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background-color: aliceblue;
+            border-radius: 50%;
+            border: 1px solid white;
+            cursor: pointer;
+            transition: background-color 300ms ease,
+            colour 300ms ease , box-shadow 300ms ease;
+        }
+        .checkbox input {
+            visibility: hidden;
+        }
+        .checkbox label::after{
+            content: "";
+            position: absolute;
+            top: 38% ;
+            left : 33% ;
+            width: 29%;
+            height: 14%;
+            opacity: 0;
+        }
+        .checkbox input:checked + label {
+            background-color: rgb(19, 85, 167);
+            border-color: rgb(65, 86, 240);
+            box-shadow: 0 5px 7px rgb(3, 26, 41);
+        }
+        .checkbox input:checked + label:after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkbox">
+        <input type="checkbox" id="a" name="check" value="check">
+        <label for="a"></label>
+    </div>
+</body>
+</html>
